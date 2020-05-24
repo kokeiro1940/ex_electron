@@ -4,15 +4,32 @@ transition : "default"
 ---
 
 # Electron
-- javascript で書いた Web アプリ を デスクトップアプリ にできる js フレームワーク
+
+---
+
+## Electron
+- HTML + CSS + JavaScript で書いた Web アプリ を
+デスクトップアプリ (ネイティブアプリ) にできる js フレームワーク
   - Node x Chromium
 - 代表例
   - VScode, Slack, Atom ... https://www.electronjs.org/apps
 
 ---
 
-## Electron 環境構築
-- node install など
+## Electron のいいところ・おしいところ
+- クロスプラットフォーム で動作
+  - 1つのコードで (WEB含めて) 4倍おいしい
+    - Windows
+    - Mac
+    - Linux
+- メモリ使用量が少ない (らしい)
+- 残念ながら Android や iOS に対しては無理
+  - PWAがんばるのか...? (ようわからん)
+
+---
+
+## 環境構築
+- node の install
 ```
 ❯❯❯ brew install nodebrew
 # export PATH=$HOME/.nodebrew/current/bin:$PATH のパスを通す
@@ -28,8 +45,9 @@ v12.16.3
 
 ---
 
-- yarn install
-  - js のパッケージマネージャー、これでelectron などの plugin を install・管理 します
+- yarn の install
+  - js のパッケージマネージャー
+  - yarn で electron などの plugin を install・管理 します
 ```
 ❯❯❯ brew install yarn
 
@@ -170,10 +188,10 @@ electron.js    node_modules   package.json   src            yarn-error.log yarn.
   "scripts": {
     "electron": "electron ."
   },
-  "devDependencies": {
+  "devDependencies": { ☆
     "electron": "^9.0.0", ☆
     "electron-builder": "^22.6.1" ☆
-  }
+  } ☆
 }
 ```
 
@@ -201,7 +219,7 @@ builder.build({
 
 - build
 ```
-❯❯❯ node build-mac
+❯❯❯ node build-mac.js
 # ちょっと時間がかかる
 ```
 
@@ -244,7 +262,7 @@ builder.build({
 ---
 
 ## パッケージング electron-packager
-- build はできたけど、パッケージを実行できなかった
+- 試していない
 ```
 ❯❯❯ yarn add  electron-packager
 
@@ -257,5 +275,10 @@ builder.build({
 
 ---
 
-# Ref
+# Electron
+
+- - -
+
+## Ref
 - https://github.com/kokeiro1940/ex_electron
+

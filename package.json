@@ -1,0 +1,15 @@
+{
+  "name": "ex_electron",
+  "version": "1.0.0",
+  "main": "electron.js",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "scripts": {
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1"
+  }
+}

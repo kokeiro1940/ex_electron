@@ -239,9 +239,9 @@ builder.build({
 # ちょっと時間がかかる
 ```
 
----
-
 - ./dist 配下に作成完了
+
+---
 
 ## パッケージング electron-packager
 - build はできたけど、パッケージを実行できなかった
@@ -256,3 +256,6 @@ builder.build({
 ```
 
 ---
+
+# Ref
+- https://github.com/kokeiro1940/ex_electron
